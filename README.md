@@ -9,7 +9,6 @@ NexTask is a productivity management platform that combines task planning, sprin
 ## Tech Stack
 
 - Spring Boot
-- .NET
 - Python
 - PostgreSQL
 - Redis
