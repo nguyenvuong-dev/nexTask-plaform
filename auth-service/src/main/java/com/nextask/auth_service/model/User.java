@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class user {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     String id;
@@ -33,7 +33,7 @@ public class user {
     @Column(nullable = false,unique = true,length = 100)
     String fullName;
 
-    @Column(nullable = false,unique = true,length = 100)
+    @Column(length = 100)
     String phone;
 
     @Column(nullable = false)
@@ -42,7 +42,7 @@ public class user {
 
     @Column(nullable = false)
     @Builder.Default
-    Boolean disblaed = false;
+    Boolean disabled = false;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)

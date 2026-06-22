@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.catalina.User;
 
 import java.time.Instant;
 
@@ -15,7 +14,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class refreshToken {
+public class RefreshToken {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     String id;
@@ -25,7 +24,7 @@ public class refreshToken {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    user user;
+    User user;
 
     @Column(nullable = false)
     Instant expiredAt;
